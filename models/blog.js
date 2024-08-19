@@ -6,7 +6,7 @@ const blogSchema = new Schema({
         type: String,
         required: true
     },
-    snipper: {
+    snippet: {
         type: String,
         required: true
     },

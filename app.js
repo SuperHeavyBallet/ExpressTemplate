@@ -49,4 +49,9 @@ app.use('/blogs', pageRoutes);
 app.get('/about', (req,res) =>
 {
     res.render('about', { title: 'About' });
+});
+
+// Else 404
+app.use((req, res) => {
+    res.render('404', { title: '404, Not Found' });
 })
