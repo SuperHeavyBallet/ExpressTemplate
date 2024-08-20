@@ -1,5 +1,13 @@
 <html lang="en">
-    <%- include("../partials/head.ejs") %>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog Website | <%= blog.title %></title>
+        <link rel="stylesheet" href="/styles.css">
+        <style>
+           
+        </style>
+    </head>
 
     <body>
         <%- include("../partials/navbar.ejs") %>
@@ -7,7 +15,7 @@
         <div class="details content">
             <h2><%= blog.title  %></h2>
             <div class="content">
-                <p><%= blog.body  %></p>
+                <p><%- blog.htmlBody  %></p>
             </div>
             <a class="delete" data-doc="<%= blog._id %>">
                 <img src="/trashcan.svg" alt="delete icon">
