@@ -11,10 +11,14 @@ const blog_index = (req, res) => {
 }
 
 const blog_details = (req, res) => {
+
+    console.log("Here!");
+    
     const id = req.params.id;
     Blog.findById(id)
     .then((result) => {
         res.render('pages/details', { blog: result, title: 'Blog Details' });
+        console.log("Blog Found:", id, result)
     })
     .catch((err) => {
         res.status(404).render('404', { title: 'Blog not found' })
